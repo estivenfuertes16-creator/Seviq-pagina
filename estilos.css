@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* 01 ENCABEZADO */
+.encabezado {
+  background-color: #0f172a;
+  padding: 18px 6%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  display: inline-block;
+  width: 35%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
+.logo img {
+  height: 36px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.menu {
+  display: inline-block;
+  width: 64%;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.menu li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 22px;
+}
+
+.menu a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #0ea5e9;
+}
+
+/* BOTÓN GENERAL */
+.boton {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0ea5e9;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+  background-color: #0284c7;
+  transform: translateY(-2px);
+}
+
+/* 02 HERO CON IMAGEN */
+.hero {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)), url("filosofia.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 8%;
+}
+
+.hero h1 {
+  font-size: 52px;
+  letter-spacing: 4px;
+  margin-bottom: 14px;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 650px;
+  margin: 0 auto 28px auto;
+  color: #cbd5e1;
+}
+
+/* 03 HERO CON VIDEO */
+.hero-video {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(45%);
+}
+
+.hero-video h1 {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 36px;
+  padding-top: 185px;
+  letter-spacing: 2px;
+}
+
+/* 04 SLIDER INTERACTIVO SIN JS */
+.slider {
+  position: relative;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 5%;
+}
+
+.slider input {
+  display: none;
+}
+
+.slide {
+  display: none;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.slide img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.slide figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
+  color: #ffffff;
+}
+
+#s1:checked ~ .slide1,
+#s2:checked ~ .slide2,
+#s3:checked ~ .slide3,
+#s4:checked ~ .slide4 {
+  display: block;
+}
+
+.puntos {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.puntos label {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: #94a3b8;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.puntos label:hover {
+  background-color: #0ea5e9;
+}
+
+/* 05 SOBRE NOSOTROS */
+.nosotros {
+  padding: 70px 8%;
+  background-color: #ffffff;
+}
+
+.col2 {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.nosotros figure.col2 {
+  margin-right: 3%;
+}
+
+.nosotros img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.nosotros h2 {
+  font-size: 30px;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.nosotros p {
+  margin-bottom: 16px;
+  color: #475569;
+}
+
+/* TÍTULO DE SECCIÓN */
+.titulo-seccion {
+  text-align: center;
+  font-size: 32px;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+/* 06 TARJETAS DE SERVICIOS */
+.servicios {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.tarjeta {
+  display: inline-block;
+  width: 31%;
+  margin: 0 1%;
+  padding: 32px 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  vertical-align: top;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(14, 165, 233, 0.2);
+}
+
+.icono {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  background-color: #0f172a;
+  color: #0ea5e9;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.tarjeta h3 {
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.tarjeta p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* 07 GALERÍA */
+.galeria {
+  padding: 70px 8%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.foto {
+  display: inline-block;
+  width: 31%;
+  margin: 1%;
+  overflow: hidden;
+  border-radius: 8px;
+  vertical-align: top;
+}
+
+.foto img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.foto:hover img {
+  transform: scale(1.08);
+}
+
+/* 08 TESTIMONIOS */
+.testimonios {
+  padding: 70px 8%;
+}
+
+.testimonio {
+  display: inline-block;
+  width: 47%;
+  margin: 0 1%;
+  padding: 24px;
+  background-color: #ffffff;
+  border-left: 5px solid #0ea5e9;
+  border-radius: 6px;
+  vertical-align: top;
+  font-style: italic;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.testimonio .autor {
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+/* 09 LLAMADO A LA ACCIÓN */
+.llamado {
+  background-color: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 65px 8%;
+}
+
+.llamado h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.llamado p {
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.llamado .boton {
+  background-color: #0ea5e9;
+}
+
+/* 10 FORMULARIO DE CONTACTO */
+.contacto {
+  padding: 70px 8%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contacto label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0ea5e9;
+}
+
+.contacto button {
+  width: 100%;
+  padding: 14px;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contacto button:hover {
+  background-color: #0ea5e9;
+}
+
+/* 11 PIE DE PÁGINA */
+.pie {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 50px 8% 24px 8%;
+}
+
+.pie-col {
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+.pie h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.pie a {
+  color: #cbd5e1;
+  text-decoration: none;
+  line-height: 2;
+  transition: color 0.3s;
+}
+
+.pie a:hover {
+  color: #0ea5e9;
+}
+
+.derechos {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* 12 BOTÓN WHATSAPP */
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  padding: 14px 24px;
+  border-radius: 30px;
+  background-color: #4825d3;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp:hover {
+  background-color: #4e1da8;
+}
+
+/* AVISO DEL FORMULARIO */
+.aviso-formulario {
+  min-height: 24px;
+  margin: -4px 0 12px;
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* CONFIRMACIÓN DEL FORMULARIO */
+.confirmacion {
+  padding: 45px 30px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #0ea5e9;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.12);
+}
+
+.confirmacion-icono {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  line-height: 64px;
+  border-radius: 50%;
+  background-color: #0ea5e9;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.confirmacion h2 {
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.confirmacion p {
+  max-width: 520px;
+  margin: 0 auto 24px;
+  color: #475569;
+}
+
+.confirmacion button {
+  width: auto;
+  padding: 12px 24px;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirmacion button:hover {
+  background-color: #0ea5e9;
+}
